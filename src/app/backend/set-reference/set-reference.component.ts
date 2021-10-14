@@ -46,7 +46,9 @@ export class SetReferenceComponent implements OnInit {
       //this.path = 'Referencias/'+this.uid+'/';
     this.uid = await this.firebaseauthservice.getUid();
     this.path = 'Referencias/'+this.uid+'/references/';
-      
+    if(this.uid==null){
+      this.router.navigate(['/']);
+    }
       
     console.log("este es el path", this.path)
     console.log("este es el uid",this.uid);

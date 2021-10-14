@@ -32,5 +32,9 @@ export class PerfilComponent implements OnInit {
     }
 
   }
+  
+  Volver(){
+    this.router.navigate(['/'])
+  }
 
 }
