@@ -1,0 +1,32 @@
+<ion-content>
+
+  <h3 class="titulo">Iniciar Sesión</h3>
+
+  
+  <ion-item>
+    <ion-label class="normal" position="floating">
+        E-mail
+    </ion-label>
+    <ion-input [(ngModel)] = "usuario.email" class="normal" type="email" inputmode="text">
+
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label class="normal" position="floating">
+        Contraseña
+    </ion-label>
+    <ion-input [(ngModel)]="usuario.password" class="normal" type="password" inputmode="text" >
+
+    </ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="iniciarSesion()">
+    Iniciar Sesión
+  </ion-button>
+  <ion-button expand="full" (click)="crearCuenta()" >
+    Crear Cuenta
+  </ion-button>
+
+
+</ion-content>

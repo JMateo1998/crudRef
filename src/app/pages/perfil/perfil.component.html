@@ -1,0 +1,37 @@
+<ion-content>
+
+  <h3 class="titulo">Registro</h3>
+
+  <ion-item>
+    <ion-label class="normal" position="floating">
+        Nombre
+    </ion-label>
+    <ion-input [(ngModel)] = "usuario.nombre" class="normal" type="text" inputmode="text">
+
+    </ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label class="normal" position="floating">
+        E-mail
+    </ion-label>
+    <ion-input [(ngModel)] = "usuario.email" class="normal" type="email" inputmode="text">
+
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label class="normal" position="floating">
+        Contraseña
+    </ion-label>
+    <ion-input [(ngModel)]="usuario.password" class="normal" type="password" inputmode="text" >
+
+    </ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="registrarse()">
+    Registrar
+  </ion-button>
+
+
+</ion-content>

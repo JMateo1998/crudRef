@@ -1,0 +1,109 @@
+<ion-content>
+
+   <div>
+    <ion-button (click) = "nueva()">
+      Nueva
+    </ion-button>
+   </div>
+    
+
+   <div *ngIf="enableNewReference">
+
+     <h3 class="titulo">Ingresa los datos de tu referencia</h3>
+  
+     <ion-item>
+       <ion-label class="normal" position="floating">
+           Título de la publicación*
+       </ion-label>
+       <ion-input [(ngModel)] = "newReference.titulopub" class="normal" type="text" inputmode="text">
+  
+       </ion-input>
+     </ion-item>
+  
+     <ion-item>
+       <ion-label class="normal" position="floating">
+           Autores*
+       </ion-label>
+       <ion-input [(ngModel)]="newReference.autores" class="normal" type="text" inputmode="text">
+  
+       </ion-input>
+     </ion-item>
+  
+     <ion-item>
+       <ion-label class="normal" position="floating">
+           Tipo de publicación*
+       </ion-label>
+  
+       <ion-select [(ngModel)]="newReference.tipopub" placeholder="Selecciona uno">
+         <ion-select-option value="1">1. Artículo de revista</ion-select-option>
+         <ion-select-option value="2">2. Artículo en evento (conferencia, seminario, etc.)</ion-select-option>
+         <ion-select-option value="3">3. Otro</ion-select-option>
+       </ion-select>
+  
+     </ion-item>
+  
+     <ion-item>
+       <ion-label class="normal" position="floating">
+           Nombre del evento o revista en la que se publicó
+       </ion-label>
+       <ion-input [(ngModel)]="newReference.eventorevista" class="normal" type="text" inputmode="text">
+  
+       </ion-input>
+     </ion-item>
+  
+     <ion-item>
+       <ion-label class="normal" position="floating">
+           DOI
+       </ion-label>
+       <ion-input [(ngModel)]="newReference.doi" class="normal" type="text" inputmode="text">
+  
+       </ion-input>
+     </ion-item>
+  
+     <ion-item>
+       <ion-label class="normal" position="floating">
+           Año de la publicación*
+       </ion-label>
+       <ion-input [(ngModel)]="newReference.anyopub" class="normal" type="number" inputmode="numeric">
+  
+       </ion-input>
+     </ion-item>
+  
+     <ion-button expand="full" (click)="guardarReferencia()">
+       Guardar
+     </ion-button>
+     <ion-button expand="full" (click)="enableNewReference = false;">
+      Cancelar
+    </ion-button>
+  
+  
+
+   </div>
+
+   
+  <ion-item *ngFor="let referencia of referencias">
+    <ion-label>
+        {{referencia.titulopub}}
+    </ion-label>
+    <ion-buttons slot="end">
+      <ion-button (click)=" newReference = referencia; enableNewReference = true;" >
+        <ion-icon slot="icon-only" color="white" name="create-outline"></ion-icon>
+      </ion-button>
+      <ion-button (click)="deleteReferencia(referencia)">
+        <ion-icon slot="icon-only" color="white" name="trash-outline"></ion-icon>
+      </ion-button>
+      <ion-button (click)= "seeDetails(referencia)">
+        <ion-icon slot="icon-only" color="white" name="eye-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+   
+
+
+  </ion-item>
+
+  <ion-button (click)="cerrarSesion()">
+    Cerrar sesión
+  </ion-button>
+
+</ion-content>

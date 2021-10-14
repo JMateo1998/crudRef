@@ -1,10 +1,21 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { SetReferenceComponent } from './backend/set-reference/set-reference.component';
+import { HomeComponent } from './pages/home/home.component';
+import { PerfilComponent } from './pages/perfil/perfil.component';
 
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    component: HomeComponent
+  },
+  {
+    path: 'set-reference',
+    component: SetReferenceComponent
+  },
+  {
+    path: 'registro',
+    component: PerfilComponent
   },
   {
     path: '',
