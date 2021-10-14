@@ -22,7 +22,9 @@ export class HomeComponent implements OnInit {
               public router: Router,
               public toastController: ToastController) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.firebaseauthservice.logout();
+  }
 
   iniciarSesion(){
     const credenciales = {

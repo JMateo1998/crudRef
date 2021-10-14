@@ -2,37 +2,37 @@
 
   <h3 class="titulo">Registro</h3>
 
-  <ion-item>
-    <ion-label class="normal" position="floating">
+  <ion-item class="item_input">
+    <ion-label position="floating">
         Nombre
     </ion-label>
-    <ion-input [(ngModel)] = "usuario.nombre" class="normal" type="text" inputmode="text">
+    <ion-input [(ngModel)] = "usuario.nombre"  type="text" inputmode="text">
 
     </ion-input>
   </ion-item>
   
-  <ion-item>
-    <ion-label class="normal" position="floating">
+  <ion-item class="item_input">
+    <ion-label  position="floating">
         E-mail
     </ion-label>
-    <ion-input [(ngModel)] = "usuario.email" class="normal" type="email" inputmode="text">
+    <ion-input [(ngModel)] = "usuario.email"  type="email" inputmode="text">
 
     </ion-input>
   </ion-item>
 
-  <ion-item>
-    <ion-label class="normal" position="floating">
-        Contraseña
+  <ion-item class="item_input">
+    <ion-label position="floating">
+        Contraseña (mínimo 6 caracteres)
     </ion-label>
-    <ion-input [(ngModel)]="usuario.password" class="normal" type="password" inputmode="text" >
+    <ion-input [(ngModel)]="usuario.password"  type="password" inputmode="text" >
 
     </ion-input>
   </ion-item>
 
-  <ion-button expand="full" (click)="registrarse()">
+  <ion-button expand="full" (click)="registrarse()" class="botones" color="danger">
     Registrar
   </ion-button>
-  <ion-button expand="full" (click)="Volver()">
+  <ion-button expand="full" (click)="Volver()" class="botones" color="danger">
     Volver
   </ion-button>
 

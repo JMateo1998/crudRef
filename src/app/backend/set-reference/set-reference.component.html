@@ -1,26 +1,26 @@
 <ion-content>
 
    <div>
-    <ion-button (click) = "nueva()">
+    <ion-button (click) = "nueva()"  class="botones2" color="danger">
       Nueva
     </ion-button>
    </div>
     
 
-   <div *ngIf="enableNewReference">
+   <div *ngIf="enableNewReference" class="containerNewReference">
 
      <h3 class="titulo">Ingresa los datos de tu referencia</h3>
   
-     <ion-item>
-       <ion-label class="normal" position="floating">
+     <ion-item class="item_input">
+       <ion-label  position="floating">
            Título de la publicación*
        </ion-label>
-       <ion-input [(ngModel)] = "newReference.titulopub" class="normal" type="text" inputmode="text">
+       <ion-input [(ngModel)] = "newReference.titulopub"  type="text" inputmode="text">
   
        </ion-input>
      </ion-item>
   
-     <ion-item>
+     <ion-item class="item_input">
        <ion-label class="normal" position="floating">
            Autores*
        </ion-label>
@@ -29,7 +29,7 @@
        </ion-input>
      </ion-item>
   
-     <ion-item>
+     <ion-item class="item_input">
        <ion-label class="normal" position="floating">
            Tipo de publicación*
        </ion-label>
@@ -42,16 +42,16 @@
   
      </ion-item>
   
-     <ion-item>
+     <ion-item class="item_input">
        <ion-label class="normal" position="floating">
-           Nombre del evento o revista en la que se publicó
+           Nombre del evento o revista
        </ion-label>
        <ion-input [(ngModel)]="newReference.eventorevista" class="normal" type="text" inputmode="text">
   
        </ion-input>
      </ion-item>
   
-     <ion-item>
+     <ion-item class="item_input">
        <ion-label class="normal" position="floating">
            DOI
        </ion-label>
@@ -60,7 +60,7 @@
        </ion-input>
      </ion-item>
   
-     <ion-item>
+     <ion-item class="item_input">
        <ion-label class="normal" position="floating">
            Año de la publicación*
        </ion-label>
@@ -69,10 +69,10 @@
        </ion-input>
      </ion-item>
   
-     <ion-button expand="full" (click)="guardarReferencia()">
+     <ion-button expand="full" (click)="guardarReferencia()" class="botones" color="danger">
        Guardar
      </ion-button>
-     <ion-button expand="full" (click)="enableNewReference = false;">
+     <ion-button expand="full" (click)="enableNewReference = false;" class="botones" color="danger">
       Cancelar
     </ion-button>
   
@@ -102,7 +102,7 @@
 
   </ion-item>
 
-  <ion-button (click)="cerrarSesion()">
+  <ion-button (click)="cerrarSesion()" class="botones2" color="danger">
     Cerrar sesión
   </ion-button>
 
